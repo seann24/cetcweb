@@ -1,0 +1,611 @@
+/* CSS Variables for consistent colors and easier maintenance */
+:root {
+  --primary-color: #5a3d9b;
+  --primary-light: rgba(185, 156, 228, 0.82);
+  --primary-dark: #4a3280;
+  --accent-color: #ffb31f;
+  --text-dark: #1a2434;
+  --text-light: #f9fcff;
+  --border-color: #a68acf;
+  --bg-light: rgba(250, 218, 221, 0.12);
+  --shadow-light: rgba(0, 0, 0, 0.04);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.25);
+
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+
+  --border-radius-sm: 8px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 16px;
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.page-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Navigation styles */
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-light);
+  width: 100%;
+}
+
+.college-name {
+  width: 100%;
+  text-align: center;
+  padding: 16px 0 8px 0;
+  color: var(--primary-color);
+  font-family: "EB Garamond", serif;
+  font-size: 38px;
+  font-weight: 600;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 48px 20px 48px;
+  width: 100%;
+}
+
+.logo-container {
+  flex: 0 0 auto;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 100;
+  visibility: hidden;
+}
+
+.hamburger-line {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 6px 0;
+  background-color: var(--primary-color);
+  transition: var(--transition-fast);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-dark);
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition-medium);
+}
+
+.nav-item {
+  transition:
+    transform var(--transition-fast),
+    opacity var(--transition-fast),
+    box-shadow var(--transition-fast);
+  position: relative;
+  z-index: 100;
+}
+.nav-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px var(--shadow-medium);
+}
+
+.nav-item.elevated {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px var(--shadow-medium);
+}
+
+.nav-item.dimmed {
+  opacity: 0.5;
+}
+
+.nav-menu:hover .nav-item:not(:hover) {
+  opacity: 0.5;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border-radius: var(--border-radius-sm);
+  box-shadow: 0 4px 12px var(--shadow-medium);
+  padding: 12px;
+  min-width: 150px;
+  display: none;
+  z-index: 1000;
+}
+
+.nav-item:hover .dropdown-menu,
+.nav-item:focus-within .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color var(--transition-fast);
+}
+
+.dropdown-link:hover,
+.dropdown-link:focus {
+  background-color: rgba(90, 61, 155, 0.1);
+  outline: none;
+}
+
+.nav-link {
+  color: var(--text-dark);
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--primary-color);
+  outline: none;
+}
+
+.login-btn {
+  padding: 17px 35px 19px;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius-md);
+  color: var(--primary-color);
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 18px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.login-btn:hover,
+.login-btn:focus {
+  background-color: var(--primary-color);
+  color: white;
+  outline: none;
+}
+
+/* Hero section styles */
+.hero-section {
+  position: relative;
+  padding: 80px 80px 120px;
+  background-color: var(--bg-light);
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 624px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  color: var(--primary-color);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 120%;
+  text-shadow: 0px 4px 4px var(--shadow-dark);
+  margin-bottom: 40px;
+}
+
+.hero-description {
+  color: var(--text-dark);
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 180%;
+  letter-spacing: 0.4px;
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+
+.stats-container {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.stats-divider {
+  width: 4px;
+  background-color: var(--accent-color);
+}
+
+.stats-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stats-title {
+  color: var(--text-dark);
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.4px;
+  opacity: 0.7;
+}
+
+.students-display {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-container {
+  margin-right: -24px;
+  transition: transform var(--transition-fast);
+}
+
+.avatar-container:hover {
+  transform: translateY(-5px);
+  z-index: 3;
+}
+
+.student-avatar {
+  width: 64px;
+  height: 64px;
+  border: 4px solid var(--text-light);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.student-count {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 24px;
+  border: 4px solid var(--text-light);
+  border-radius: 32px;
+  margin-left: 16px;
+  background-color: var(--accent-color);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.about-btn {
+  padding: 24px 80px;
+  border-radius: var(--border-radius-lg);
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  border: none;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.about-btn:hover,
+.about-btn:focus {
+  background-color: var(--primary-dark);
+  outline: none;
+}
+
+.tickets-btn {
+  padding: 24px 80px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  color: var(--text-dark);
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  background: white;
+  box-shadow: 8px 8px 16px var(--shadow-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tickets-btn:hover,
+.tickets-btn:focus {
+  background-color: #f5f0ff;
+  box-shadow: 8px 8px 20px var(--shadow-medium);
+  outline: none;
+}
+
+/* Decorative elements */
+.hero-blob-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-blob {
+  width: 929px;
+  height: 581px;
+}
+
+.hero-arrow-container {
+  position: absolute;
+  top: 320px;
+  right: 380px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-arrow {
+  width: 400px;
+  height: 200px;
+  transform: rotate(-15deg);
+}
+
+.hero-underline-container {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -150px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-underline {
+  width: 300px;
+  height: 19px;
+  transform: rotate(-2.37deg);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .hero-blob {
+    width: 700px;
+    height: auto;
+  }
+
+  .hero-arrow {
+    width: 300px;
+    height: auto;
+    right: 280px;
+  }
+}
+
+@media (max-width: 991px) {
+  .main-nav {
+    padding: 20px;
+  }
+
+  .college-name {
+    font-size: 32px;
+    padding: 12px 0 6px 0;
+  }
+
+  .nav-content {
+    padding: 16px;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .nav-menu {
+    width: 100%;
+    justify-content: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1500;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    visibility: visible;
+  }
+
+  .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-light);
+    padding: 20px;
+    z-index: 99;
+    box-shadow: 0 10px 20px var(--shadow-medium);
+    border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+  }
+
+  .nav-menu.active {
+    display: flex;
+    animation: slideDown 0.3s ease-in-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .nav-item {
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .login-btn {
+    margin-top: 16px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-section {
+    padding: 40px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-blob,
+  .hero-arrow,
+  .hero-underline {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-nav {
+    padding: 16px;
+  }
+
+  .college-name {
+    font-size: 28px;
+    padding: 8px 0 4px 0;
+  }
+
+  .nav-content {
+    padding: 12px;
+  }
+
+  .hero-section {
+    padding: 24px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .about-btn,
+  .tickets-btn {
+    width: 100%;
+    padding: 16px;
+  }
+}
+
+/* Accessibility focus styles */
+a:focus,
+button:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Skip to content for accessibility */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-to-content:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 16px;
+  background: white;
+  z-index: 9999;
+  color: var(--primary-color);
+  font-weight: bold;
+}
