@@ -1,0 +1,504 @@
+.user-wallet {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #5a3d9b;
+    color: #333;
+    line-height: 1.6;
+}
+
+.sidebar {
+    width: 300px;
+    padding: 40px 20px;
+    background-color: #5a3d9b;
+}
+
+
+.user-info {
+    margin-bottom: 60px;
+}
+
+.profile-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #dc3434;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.username {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.user-id {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 17px;
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-item {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-item.active {
+    color: white;
+}
+.main-content {
+    flex: 1;
+    background: white;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.content-left {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.balance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.balance-tag {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: #fcbe00;
+}
+
+.user-avatars {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.add-user {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.add-user:hover {
+    background-color: #e0e0e0;
+}
+
+.referrals-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.referral-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.icon-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #5a3d9b;
+}
+
+.info-label {
+    flex: 1;
+    font-weight: 600;
+}
+
+.info-value {
+    color: #666;
+}
+
+.invited-users {
+    margin-top: 40px;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.user-name {
+    font-weight: 600;
+}
+
+.user-details {
+    color: #666;
+    font-size: 14px;
+}
+
+.user-stats {
+    margin-left: auto;
+    text-align: right;
+    color: #666;
+}
+
+.content-right {
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(185, 156, 228, 0.21);
+    border-radius: 15px;
+}
+
+.stars-info {
+    margin-bottom: 30px;
+}
+
+.star-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.star-value {
+    color: #5d85b3;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.recharge-section {
+    border-radius: 15px;
+    padding: 20px;
+    background-color: rgba(252, 190, 0, 0.29);
+}
+
+.recharge-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.recharge-description {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.recharge-button {
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #5a3d9b;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.recharge-button:hover {
+    background-color: #4a2d8b;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 1200px) {
+    .user-wallet {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+    .main-content {
+        flex-direction: column;
+        margin: 0;
+        border-radius: 0;
+    }
+    .content-left {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    .content-right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .balance-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .user-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .user-stats {
+        margin-left: 0;
+        text-align: left;
+        margin-top: 10px;
+    }
+}
+.hidden {
+    display: none;
+}
+
+/* Ensure form inputs align properly */
+.account-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: 50px; /* Push it left */
+}
+
+.account-settings label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.account-settings input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.account-settings button {
+    width: 100%;
+    padding: 10px;
+    background: #5a3db6;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.account-settings button:hover {
+    background: #43289a;
+}
+
+/* Fix sidebar link colors */
+.nav-item a {
+    text-decoration: none;
+    color: #d3d3d3;
+    font-weight: bold;
+}
+
+.nav-item a:hover,
+.nav-item.active {
+    color: white;
+}
+
+/* Adjust main content spacing */
+.main-content {
+    padding: 40px;
+    flex: 1;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Make the content box sharper (remove excess rounding) */
+.main-content {
+    border-radius: 8px;
+}
+
+.purchase-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.purchase-table th,
+.purchase-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.purchase-table th {
+    font-weight: bold;
+}
+
+/* Login & Logout Button Styles */
+
+.auth-container {
+    min-height: 100vh; /* Ensures full-page consistency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-button {
+    width: 100%;
+    padding: 12px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: 8px; /* Matches existing rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    font-size: 18px;
+}
+/* Login Page Styling */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #5a3d9b;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-box h2 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form label {
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.login-button {
+    background-color: #5a3d9b;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #4a2d8b;
+}
+

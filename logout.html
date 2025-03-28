@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Plus+Jakarta+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="user-wallet-dashboard.css">
+    <script>
+        function confirmLogout() {
+            document.getElementById("logout-message").textContent = "Logging out...";
+            setTimeout(() => {
+                window.location.href = "login.html";
+            }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <div class="user-wallet">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="user-info">
+                <div class="profile-wrapper">
+                    <img src="https://placehold.co/150x150/ffffff/ffffff" alt="User profile" class="profile-image">
+                    <div class="notification-badge" aria-label="4 notifications">4</div>
+                </div>
+                <h2 class="username">Username</h2>
+                <p class="user-id">User ID</p>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="account.html">Account</a></li>
+                <li class="nav-item"><a href="wallet.html">Wallet</a></li>
+                <li class="nav-item"><a href="purchase-history.html">Purchase History</a></li>
+                <li class="nav-item active">Log out</li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="logout-container">
+                <h2>Are you sure you want to log out?</h2>
+                <button class="recharge-button" onclick="confirmLogout()">Log Out</button>
+                <p id="logout-message"></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -93,7 +93,7 @@ body {
 .dropdown-item {
   display: block;
   padding: 8px 16px;
-  color: var(--text-color);
+  color: var(--text-color)!important;
   text-decoration: none;
   font-size: 16px;
   transition: all 0.3s ease;
@@ -101,12 +101,45 @@ body {
 
 .dropdown-item:hover {
   background-color: var(--background-light);
+  color: var(--primary-color) !important;
   transform: translateY(-2px);
 }
 
 .nav-item:hover .dropdown-menu {
   display: block;
 }
+
+.nav-item:last-of-type .nav-link,
+.nav-item:nth-last-of-type(2) .nav-link {
+  color: var(--text-color);
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-item:last-of-type .nav-link:hover,
+.nav-item:nth-last-of-type(2) .nav-link:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.nav-item .nav-link {
+  color: var(--text-color);
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-item .nav-link:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+
 
 .nav-item:hover .dropdown-trigger {
   color: var(--primary-color);
@@ -134,9 +167,9 @@ body {
 
 .nav-button {
   padding: 17px 35px 19px;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--border-color) !important;
   border-radius: 10px;
-  color: var(--border-color);
+  color: var(--primary-color)  !important;
   font-family: "Outfit", sans-serif;
   font-size: 20px;
   font-weight: 600;
@@ -148,9 +181,10 @@ body {
 
 .nav-button:hover {
   background-color: var(--border-color);
-  color: var(--text-light);
+  color: var(--text-light) !important;;
   transform: translateY(-2px);
 }
+
 
 @media (max-width: 991px) {
   .main-nav {
@@ -1356,16 +1390,26 @@ body {
 }
 
 .contact-button {
+  display: inline-block; /* Ensures <a> behaves like a button */
+  text-align: center;
+  text-decoration: none; /* Removes underline */
   color: var(--border-color);
   font-size: 17px;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 17px 35px;
+  padding: 17px 70px; /* Increase padding to make it wider */
   border-radius: 10px;
   border: 2px solid var(--border-color);
   background-color: var(--text-light);
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
+
+.contact-button:hover {
+  background-color: var(--border-color);
+  color: var(--text-light);
+}
+
 
 @media (max-width: 991px) {
   .hero-section {
@@ -1482,6 +1526,11 @@ body {
 }
 
 .dropdown-menu {
-  z-index: 1000;
+  z-index: 10;
+}
+
+
+#feature-section {
+  scroll-margin-top: -120px; /* Adjust based on navbar height */
 }
 

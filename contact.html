@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <section id="contact" onsubmit="sendMail(); return false;">
+        <h1>Contact Us</h1>
+        <p>EmailJs or another api can be used here.</p>
+        <form class="needs-validation" novalidate>
+            <div>
+              <label for="contactName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="contactName" placeholder="Your name" required>
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Please provide your name.</div>
+            </div>
+            <div>
+              <label for="contactEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="contactEmail" placeholder="Your email address" required>
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Please provide a valid email address.</div>
+            </div>
+            <div>
+              <label for="contactMessage" class="form-label">Message</label>
+              <textarea class="form-control form-control-lg"  id="contactMessage" placeholder="Your message" required></textarea>
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Please enter your message.</div>
+            </div>
+            <div>
+              <button type="submit" class="form-submit" id="form-submit">Submit</button>
+            </div>
+          </form>
+    </section>
+    <script type="text/javascript"
+    src="#">
+</script>
+<script type ="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "#",
+  });
+})();
+</script>
+</script>
+    <script src="contact.js"></script>
+</body>
+</html>

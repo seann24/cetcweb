@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase History - User Wallet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Plus+Jakarta+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="user-wallet-dashboard.css">
+</head>
+<body>
+    <div class="user-wallet">
+        <nav class="sidebar">
+            <div class="user-info">
+                <div class="profile-wrapper">
+                    <img src="https://placehold.co/150x150/ffffff/ffffff" alt="User profile" class="profile-image">
+                    <div class="notification-badge">4</div>
+                </div>
+                <h2 class="username">Username</h2>
+                <p class="user-id">User ID</p>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="account.html">Account</a></li>
+                <li class="nav-item"><a href="wallet.html">Wallet</a></li>
+                <li class="nav-item active">Purchase History</li>
+                <li class="nav-item"><a href="logout.html">Log out</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <div class="purchase-history-container">
+                <h2>Purchase History</h2>
+                <p>View your past transactions.</p>
+            </div>
+            <table class="purchase-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Product 1</td>
+                        <td>2025-03-01</td>
+                        <td>$10.00</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>Product 2</td>
+                        <td>2025-03-02</td>
+                        <td>$5.00</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

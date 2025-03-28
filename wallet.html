@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Wallet Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Plus+Jakarta+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="user-wallet-dashboard.css">
+</head>
+<body>
+    <div class="user-wallet">
+        <nav class="sidebar">
+            <div class="user-info">
+                <div class="profile-wrapper">
+                    <img src="https://placehold.co/150x150/ffffff/ffffff" alt="User profile" class="profile-image">
+                    <div class="notification-badge" aria-label="4 notifications">4</div>
+                </div>
+                <h2 class="username">Username</h2>
+                <p class="user-id">User ID</p>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="account.html">Account</a></li>
+                <li class="nav-item active">Wallet</li>
+                <li class="nav-item"><a href="purchase-history.html">Purchase History</a></li>
+                <li class="nav-item"><a href="logout.html">Log out</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <section class="content-left">
+                <div class="balance-header">
+                    <div class="balance-tag">#balance</div>
+                    <div class="user-avatars">
+                        <img src="https://placehold.co/32x32/pink/pink" alt="User 1" class="avatar">
+                        <img src="https://placehold.co/32x32/blue/blue" alt="User 2" class="avatar">
+                        <img src="https://placehold.co/32x32/purple/purple" alt="User 3" class="avatar">
+                        <button class="add-user" aria-label="Add user">
+                            <i class="ti ti-plus" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="referrals-section">
+                    <h3 class="section-title">Referrals</h3>
+                    <div class="referral-info">
+                        <div class="info-item">
+                            <div class="icon-wrapper">
+                                <i class="ti ti-shopping-cart" aria-hidden="true"></i>
+                            </div>
+                            <div class="info-label">Your referral code</div>
+                            <div class="info-value">code</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-wrapper">
+                                <i class="ti ti-user" aria-hidden="true"></i>
+                            </div>
+                            <div class="info-label">Referrer information</div>
+                            <div class="info-value">username</div>
+                        </div>
+                    </div>
+                    <div class="invited-users">
+                        <h4 class="section-title">List of Invited Users</h4>
+                        <div class="user-item">
+                            <div class="icon-wrapper">
+                                <i class="ti ti-bell" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="user-name">username1</div>
+                                <div class="user-details">Date invited • Name of user</div>
+                            </div>
+                            <div class="user-stats">
+                                <span>Ticket OR</span>
+                                <br>
+                                <span>times invited</span>
+                            </div>
+                        </div>
+                        <div class="user-item">
+                            <div class="icon-wrapper">
+                                <i class="ti ti-player-play" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="user-name">username2</div>
+                                <div class="user-details">Date invited • Name of User</div>
+                            </div>
+                            <div class="user-stats">
+                                <span>Ticket OR</span>
+                                <br>
+                                <span>times invited</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <aside class="content-right">
+                <h3 class="section-title">Stars</h3>
+                <div class="stars-info">
+                    <div class="star-item">
+                        <div>Stars earned from others</div>
+                        <div class="star-value">200</div>
+                    </div>
+                    <div class="star-item">
+                        <div>Stars generated for others</div>
+                        <div class="star-value">400</div>
+                    </div>
+                </div>
+                <div class="recharge-section">
+                    <h4 class="recharge-title">Recharge your balance</h4>
+                    <p class="recharge-description">
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                        ad minim.
+                    </p>
+                    <button class="recharge-button">Add Funds</button>
+                </div>
+            </aside>
+        </main>
+    </div>
+</body>
+</html> 
