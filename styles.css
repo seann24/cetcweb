@@ -382,6 +382,12 @@ width: 64px;
 height: auto;
 }
 
+.kamflix-img{
+width: 350px;
+height: auto;
+align-items: center;
+}
+
 .section-title {
 color: #1a2434;
 font-family: "Plus Jakarta Sans", sans-serif;
@@ -1138,7 +1144,7 @@ body {
 }
 
 .feature-icon {
-  width: 400px;
+  width: 500px;
   margin-top: 24px;
   aspect-ratio: 1;
   object-fit: contain;
@@ -1193,7 +1199,7 @@ body {
 }
 
 .about-image {
-  width: 265px;
+  width: 365px;
   border-radius: 16px;
 }
 
