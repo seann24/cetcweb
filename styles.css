@@ -933,34 +933,83 @@ body {
 
 .hero-section {
   position: relative;
-  padding: 80px;
+  padding: 80px 20px;
   background-color: var(--background-light);
 }
 
 .hero-content {
-  max-width: 624px;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
+.hero-section {
+  position: relative;
+  padding: 80px 20px;
+  background-color: var(--background-light);
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Title Styles */
 .hero-title {
   color: var(--primary-color);
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 60px;
+  font-size: 62px;
   font-weight: 700;
-  line-height: 120%;
+  line-height: 1.2;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-bottom: 40px;
+  margin-bottom: 24px;
+  width: 100%;
+  text-align: left; /* Align left as shown in image */
 }
 
+.hero-subtitle {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  color: var(--secondary-color);
+  text-align: left;
+}
+
+/* Description Styles */
 .hero-description {
-  font-size: 20px;
-  line-height: 180%;
-  letter-spacing: 0.4px;
-  opacity: 0.7;
+  font-size: 22px;
+  line-height: 1.6;
   margin-bottom: 40px;
+  max-width: 1400px;
+  text-align: left;
 }
 
+/* Stats Section */
+.hero-stats {
+  margin-top: 60px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 20px;
+  }
+  
+  .hero-title {
+    font-size: 32px;
+  }
+  
+  .hero-subtitle {
+    font-size: 20px;
+  }
+  
+  .hero-description {
+    font-size: 16px;
+  }
+}
 .stats-container {
   display: flex;
   gap: 40px;
